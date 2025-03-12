@@ -8,71 +8,74 @@
 
 /* Background Styling */
 body {
-    background: #f8f9ff;
+    background: #E6E6FA; /* Soft Lavender Background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Main Container */
 .container {
     background: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
     width: 100%;
     text-align: center;
 }
 
 /* Name Styling */
 .name {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
+    color: #4B0082; /* Dark Indigo for contrast */
+    background: #D8BFD8; /* Light purple name bar */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* Content Layout */
 .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-align: left;
 }
 
 /* Section Styling */
 .section {
     width: 48%;
-    background: #f8f9fa;
-    padding: 20px;
+    background: #F5F5FF; /* Very light lavender */
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
-    font-size: 22px;
-    color: #007bff;
-    margin-bottom: 10px;
+    font-size: 18px;
+    color: #6A0DAD; /* Deep Purple */
+    margin-bottom: 8px;
 }
 
 .section h3 {
-    font-size: 18px;
-    color: #0056b3;
-    margin-top: 15px;
+    font-size: 16px;
+    color: #5A009D;
+    margin-top: 10px;
+}
+
+.section p, .section li {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
 }
 
 .section ul {
-    margin-top: 10px;
+    margin-top: 5px;
     padding-left: 15px;
-}
-
-.section li {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 8px;
 }
 
 /* Responsive Design */
@@ -84,6 +87,6 @@ body {
 
     .section {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 }
