@@ -8,52 +8,82 @@
 
 /* Background Styling */
 body {
-    background: #f5f7fa;
+    background: #f8f9ff;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     padding: 20px;
 }
 
-/* Header Styling */
+/* Main Container */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Name Styling */
 .name {
     font-size: 28px;
     font-weight: 700;
-    text-align: center;
+    color: #333;
     margin-bottom: 20px;
 }
 
-/* Main Container */
-.container {
+/* Content Layout */
+.content {
     display: flex;
     justify-content: space-between;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    width: 100%;
+    text-align: left;
 }
 
 /* Section Styling */
-.about, .women-in-tech {
+.section {
     width: 48%;
+    background: #f8f9fa;
     padding: 20px;
     border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about h2, .women-in-tech h2 {
+.section h2 {
     font-size: 22px;
     color: #007bff;
     margin-bottom: 10px;
 }
 
-p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
+.section h3 {
+    font-size: 18px;
+    color: #0056b3;
+    margin-top: 15px;
+}
+
+.section ul {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.section li {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
