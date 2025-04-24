@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #5a2a83;
+            --secondary-color: #f0e6ff;
+            --accent-color: #8a4fff;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .cert-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            background-color: var(--white);
+            cursor: pointer;
+        }
+        
+        .cert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cert-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .cert-title {
+            padding: 1rem;
+            text-align: center;
+            background-color: var(--white);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+        
+        .lightbox-title {
+            color: white;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-btn:hover {
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+            
+            .cert-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .lightbox-content img {
+                max-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CERTIFICATES</h1>
+        <div class="cert-gallery">
+            <div class="cert-item" onclick="openLightbox('TINK-HER-HACK.jpg', 'Tink-Her-Hack 2.0 Certificate')">
+                <img src="TINK-HER-HACK.jpg" alt="Tink Her Hack Certificate">
+                <div class="cert-title">Tink-Her-Hack 2.0</div>
+            </div>
+            
+            <div class="cert-item" onclick="openLightbox('HACK EUROPA.jpg', 'Hack Europa Certificate')">
+                <img src="HACK EUROPA.jpg" alt="Hack Europa Certificate">
+                <div class="cert-title">Hack Europa</div>
+            </div>
+            
+            <div class="cert-item" onclick="openLightbox('DYUTHI.jpg', 'Python Workshop')">
+                <img src="DYUTHI.jpg" alt="Dyuthi Certificate">
+                <div class="cert-title">Python Workshop</div>
+            </div>
+            
+            <!-- You can add more certificates following the same structure -->
+            <!--
+            <div class="cert-item" onclick="openLightbox('certificate4.jpg', 'Certificate Title')">
+                <img src="certificate4.jpg" alt="Certificate 4">
+                <div class="cert-title">Certificate Title</div>
+            </div>
+            -->
+        </div>
+        
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <div class="lightbox-title" id="lightbox-title"></div>
+            </div>
+        </div>
+
+    <script>
+        function openLightbox(imageSrc, title) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            
+            lightboxImg.src = imageSrc;
+            lightboxTitle.textContent = title;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>

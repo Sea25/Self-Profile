@@ -8,7 +8,7 @@
 
 /* Background Styling */
 body {
-    background: #FAF3E0; /* Soft Cream */
+    background: #f8f9fa; /* Soft Cream */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
 
 /* Main Container */
 .container {
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -40,14 +40,14 @@ body {
 .name {
     font-size: 26px;
     font-weight: 700;
-    color: #3E3D3D;
+    color: #090d3e;
     margin-bottom: 10px;
 }
 
 /* Role */
 .role {
     font-size: 18px;
-    color: #6A0DAD; /* Deep Purple */
+    color: #846d94; /* Deep Purple */
     margin-bottom: 20px;
 }
 

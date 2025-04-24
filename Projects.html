@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sona Elizabeth Abraham</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #070f51;   /* Light tan */
+            --secondary: #090d3e; /* Muted taupe */
+            --accent: #ded8d8;   /* Cream */
+            --text: #000000;     /* Dark gray */
+            --light: #f8f9fa;    /* Off-white */
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background-color: var(--light);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .name {
+            color: var(--secondary);
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .name:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .achievement-card {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .achievement-card h2 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .achievement-card h2 i {
+            color: var(--primary);
+        }
+        
+        .achievement-card p {
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .next-steps {
+            background: var(--accent);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .next-steps h2 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .next-steps p {
+            color: var(--text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .achievement-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="name">My Projects</h1>
+
+        <div class="achievement-card">
+            <h2><i class="fas fa-book"></i> Pass With Ease</h2>
+            <p>Our project, <strong>Pass With Ease</strong>, is a student-friendly web platform designed to simplify buying, selling, and exchanging books while promoting learning.</p>
+            <p>It features dynamic book listings with search functionality, allowing users to upload books for exchange or sale, including editable prices for sellers. The tutoring section offers educational videos in a responsive grid layout, and a contact section includes a form and an embedded Google Map for location details.</p>
+            <p>Built with HTML, CSS, and JavaScript, the platform boasts a clean, modern design with interactive elements like hover effects and modals. Future enhancements could include backend integration, user authentication, and payment gateways, making it a one-stop solution for affordable learning resources and book sharing.</p>
+            <a href="https://pass-with-ease.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+        </div>
+
+        <div class="achievement-card">
+            <h2><i class="fas fa-book"></i> VeriSafe</h2>
+            <p>Our project, <strong>VeriSafe</strong>, is an all-in-one solution for campus safety. Featuring emergency alerts, live location sharing, emergency contacts, and spam detection. Stay safe, stay secure.</p>
+            <p>SafeCampus simplifies safety measures by integrating these features into one platform, making it easier for users to stay secure and respond effectively to emergencies. It promotes peace of mind and a safer campus environment for everyone.</p>
+            <p><strong>Emergency Alerts:</strong> Instantly notify campus security during emergencies, ensuring quick response times.</p><strong>Live Location Sharing:</strong> Share real-time location with trusted contacts, enabling faster assistance in critical situations.</p><strong>Emergency Contacts:</strong> Provide easy access to important emergency numbers and services, saving time during crises.</p><strong>Spam Checker:</strong> Detect and avoid suspicious links or files, protecting users from online threats.</p>
+            <a href="https://veri-safe.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+        </div>
+
+        <div class="next-steps">
+            <h2><i class="fas fa-rocket"></i> What's Next?</h2>
+            <p>I'm excited to take part in more hackathons, contribute to tech communities, and work on impactful projects that solve real-world problems.</p>
+        </div>
+    </div>
+</body>
+</html>
