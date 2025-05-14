@@ -1,38 +1,32 @@
-// Custom Cursor
-document.addEventListener('mousemove', (e) => {
-  const cursor = document.querySelector('.cursor');
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
+// Contact Form Submission Handler
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
 
-// Particle.js Config
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
-    color: { value: "#64ffda" },
-    shape: { type: "circle" },
-    opacity: { random: true, value: 0.5 },
-    size: { random: true, value: 3 },
-    line_linked: { enable: true, distance: 150, color: "#64ffda", opacity: 0.4, width: 1 },
-    move: { enable: true, speed: 2, direction: "none", random: true }
-  }
-});
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Stop the default form submission
 
-// Confetti Button
-const confettiBtn = document.getElementById('confetti-btn');
-confettiBtn.addEventListener('click', () => {
-  for (let i = 0; i < 50; i++) {
-    const confetti = document.createElement('div');
-    confetti.className = 'confetti';
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.animation = `fall ${Math.random() * 2 + 1}s linear forwards`;
-    document.body.appendChild(confetti);
-    setTimeout(() => confetti.remove(), 2000);
-  }
-});
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const message = form.message.value.trim();
 
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+        // Basic validation
+        if (!name || !email || !message) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        // Example placeholder logic
+        console.log("Form Submitted:");
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Phone:", phone);
+        console.log("Message:", message);
+
+        // Clear form
+        form.reset();
+
+        // Feedback to user
+        alert("Thank you for reaching out! I’ll get back to you soon.");
+    });
 });
