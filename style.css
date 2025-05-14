@@ -79,101 +79,79 @@ body {
 }
 
 /* Contact Section */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
 .contact-section {
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
+.contact-container {
+  max-width: 600px;
+  margin: auto;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    align-items: start;
+.contact-container h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #222;
 }
 
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #222;
+.contact-container p {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 30px;
 }
 
-.contact-info ul {
-    list-style: none;
-    padding: 0;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.contact-info li {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+input,
+textarea {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s ease;
 }
 
-.contact-info .social-media a {
-    margin-right: 10px;
-    font-size: 1.3rem;
-    color: #0073b1;
-    transition: color 0.3s;
+input:focus,
+textarea:focus {
+  border-color: #f64c72;
 }
 
-.contact-info .social-media a:hover {
-    color: #005580;
+textarea {
+  resize: none;
+  height: 130px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+button {
+  background-color: #16014b;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    resize: none;
-}
-
-.contact-form textarea {
-    height: 120px;
-}
-
-.btn-primary {
-    padding: 12px;
-    background-color: #0073b1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #005580;
-}
-
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
+button:hover {
+  background-color: #1f1987;
 }
 
 

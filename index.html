@@ -215,28 +215,33 @@
         </div>
 
         <!-- Contact Section -->
-<section id="contact" class="section contact-section">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> sonaabraham016@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> +91 9526585277</li>
-                    <li class="social-media">
-                        <a href="https://www.linkedin.com/in/sona-elizabeth-abraham-351442304" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Sea25" target="_blank"><i class="fab fa-github"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <input type="text" id="name" name="name" required placeholder="Your Name">
-                <input type="email" id="email" name="email" required placeholder="Your Email">
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
-                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    <h2>Get In Touch</h2>
+    <hr style="border: none; border-top: 2px solid #0e104b; width: 100%; margin: 30px 0;">
+
+    <p>I’d love to hear from you. Let’s start something great together.</p>
+    <form action="https://formspree.io/f/xrbqonva" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <!-- You can add other form fields here if needed -->
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </section>
